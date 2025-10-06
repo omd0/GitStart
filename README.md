@@ -29,7 +29,24 @@ Simply open `index.html` in your web browser to see the Hello World page.
 - Clean, professional styling
 - Git repository information display
 
-## 📝 Git Commands
+## 📝 Git Setup & Commands
+
+### First Time Git Setup
+
+Before using Git, configure your identity:
+
+```bash
+# Set your name (replace "Your Name" with your actual name)
+git config --global user.name "Your Name"
+
+# Set your email (replace with your actual email)
+git config --global user.email "your_email@example.com"
+
+# Verify your configuration
+git config --list
+```
+
+### Repository Commands
 
 To get started with this repository:
 
