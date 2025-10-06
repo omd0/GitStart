@@ -64,6 +64,39 @@ git commit -m "Initial commit: Add Hello World web page"
 git status
 ```
 
+### Forking and Pushing to Remote
+
+To share your repository on GitHub:
+
+1. **Fork the repository on GitHub:**
+   - Go to the original repository on GitHub
+   - Click the "Fork" button in the top-right corner
+   - This creates a copy in your GitHub account
+
+2. **Add remote origin:**
+   ```bash
+   # Add your forked repository as remote origin
+   git remote add origin https://github.com/YOUR_USERNAME/GitStart.git
+   
+   # Verify remote was added
+   git remote -v
+   ```
+
+3. **Push to GitHub:**
+   ```bash
+   # Push your commits to GitHub (first time)
+   git push -u origin master
+   
+   # For subsequent pushes
+   git push
+   ```
+
+4. **Pull updates (if working with others):**
+   ```bash
+   # Pull latest changes from remote
+   git pull origin master
+   ```
+
 ## 🎯 Purpose
 
 This project serves as a learning tool for:
