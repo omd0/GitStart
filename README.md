@@ -95,6 +95,45 @@ To share your repository on GitHub:
    ```bash
    # Pull latest changes from remote
    git pull origin master
+   
+   # Alternative: Pull and rebase (cleaner history)
+   git pull --rebase origin master
+   
+   # Pull from a specific branch
+   git pull origin main
+   
+   # Pull all branches from remote
+   git fetch --all
+   git pull --all
+   ```
+
+5. **Advanced Pull Commands:**
+   ```bash
+   # Check what changes will be pulled (without actually pulling)
+   git fetch origin
+   git log HEAD..origin/master --oneline
+   
+   # Pull with verbose output to see what's happening
+   git pull -v origin master
+   
+   # Pull and automatically resolve conflicts with local changes
+   git pull --strategy=recursive -X theirs origin master
+   
+   # Reset to match remote exactly (WARNING: loses local changes)
+   git fetch origin
+   git reset --hard origin/master
+   ```
+
+6. **Handling Merge Conflicts:**
+   ```bash
+   # If conflicts occur during pull
+   git status                    # See conflicted files
+   # Edit files to resolve conflicts
+   git add .                     # Stage resolved files
+   git commit                    # Complete the merge
+   
+   # Abort the pull if you want to start over
+   git merge --abort
    ```
 
 ## 🎯 Purpose
